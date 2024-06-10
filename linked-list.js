@@ -1,9 +1,6 @@
 import {
   append,
   prepend,
-  size,
-  head,
-  tail,
   at,
   pop,
   contains,
@@ -14,15 +11,15 @@ import {
 class Node {
   constructor() {
     this.value = null;
-    this.nexNode = null;
+    this.nextNode = null;
   }
 }
 
 class LinkedList {
   constructor() {
-    this.size = 0;
-    this.head = null;
-    this.tail = null;
+    this.listSize = 0;
+    this.listHead = null;
+    this.listTail = null;
     this.append = append;
     this.prepend = prepend;
     this.at = at;
@@ -30,6 +27,21 @@ class LinkedList {
     this.contains = contains;
     this.find = find;
     this.toString = toString;
+  }
+
+  size() {
+    // LinkedList class maintains a size property, so simply return it
+    return this.listSize;
+  }
+
+  head() {
+    // LinkedList class maintains a head property, so simply return it
+    return this.listHead;
+  }
+
+  tail() {
+    // LinkedList class maintains a tail property, so simply return it
+    return this.listTail;
   }
 }
 
